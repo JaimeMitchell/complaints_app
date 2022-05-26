@@ -17,15 +17,15 @@ return limit, borough
     //update the value of the total variable using textContent
     // const Manhattan = () => result.textContent
    
-    const Manhattan = () => boroughBtn()
+    const Manhattan = () => boroughBtn("MANHATTAN",limit)
 
-    const Brooklyn = () =>  boroughBtn()
+    const Brooklyn = () =>  boroughBtn("BROOKLYN",limit)
 
-    const Bronx = () => boroughBtn()
+    const Bronx = () => boroughBtn("BRONX",limit)
 
-    const Queens = () => boroughBtn() 
+    const Queens = () => boroughBtn("QUEENS",limit) 
 
-    const StatenIsland = () => boroughBtn()
+    const StatenIsland = () => boroughBtn("STATEN ISLAND",limit)
 
     //3. Attach Functions to Buttons, this is the connection between the buttons and the 'display' div
     const ManhattanBtn = document.querySelector('#manhattan')
