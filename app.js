@@ -17,14 +17,12 @@ function borough(borough, limit) {
                 const display = document.getElementById('display')
                 display.appendChild(div)
                 p2.style.visibility = 'hidden'
-                btn.textContent = "what did the police do? I mean, besides nothing or making things worse?"
+                btn.textContent = "Pigs response?"
                 btn.addEventListener('click', function () {
                     p2.style.visibility = 'visible'
                     p2.textContent = complaint.resolution_description
                 })
                 console.log(data)
-                // `${borough}NYPD complain ${index} is ${complaint.complaint_type}`
-                // `${complaint.resolution_description}`
             })
         })
         .catch(error => console.log(error))
@@ -66,16 +64,3 @@ QueensBtn.addEventListener('click', queens)
 
 const StatenIslandBtn = document.querySelector('#statenIsland')
 StatenIslandBtn.addEventListener('click', statenIsland)
-
-
-
-
-
-//NOTES:
-//Keeping this here to see how I can test my functions next time
-// ManhattanBtn.addEventListener('click', function () {
-//     console.log('test')
-//     const textBox = document.querySelector("#textBox")
-//     let number=textBox.value||10
-//     borough("MANHATTAN", number)
-// })
