@@ -1,44 +1,48 @@
-let limit = 10
-const borough = "BROOKLYN"
+// let limit = 10
+// const borough = BROOKLYN
+const display = document.querySelector('.display')
 
-    //function
-function boroughBtn(limit, borough) {
-    fetch('https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough='+borough + "&$limit=" +limit)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
-return limit, borough
+//function
+function borough(borough, limit) {
+    return fetch('https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=' + borough + "&$limit=" + limit)
+        .then(response => response.json())
+        .then(data => {  })
+        .catch(error => console.log(error))
+
 }
-    //1. Create a new variable called 'display' and assign it the div with the id of 'display'
-    const display = document.querySelector('#display')
-    let result = display.textContent
+//1. Create a new variable called 'display' and assign it the div with the id of 'display'
+function num () {
+    const textBox = document.querySelector("#textBox")
+    return display.textContent = textBox.value}
+    // clears out the input value prop
+    // input.value = ''
 
-    //2. Create Six Functions (manhattan, brooklyn, bronx, queens, statenIsland) 
-    //update the value of the total variable using textContent
-    // const Manhattan = () => result.textContent
-   
-    const Manhattan = () => boroughBtn("MANHATTAN",limit)
+//2. Create Six Functions (num, manhattan, brooklyn, bronx, queens, statenIsland) 
+//update the value of the div variable using textContent
+// const Manhattan = () => result.textContent
 
-    const Brooklyn = () =>  boroughBtn("BROOKLYN",limit)
+const manhattan = () => borough("MANHATTAN", num())
 
-    const Bronx = () => boroughBtn("BRONX",limit)
+const brooklyn = () => borough("BROOKLYN", num())
 
-    const Queens = () => boroughBtn("QUEENS",limit) 
+const bronx = () => borough("BRONX", num())
 
-    const StatenIsland = () => boroughBtn("STATEN ISLAND",limit)
+const queens = () => borough("QUEENS", num())
 
-    //3. Attach Functions to Buttons, this is the connection between the buttons and the 'display' div
-    const ManhattanBtn = document.querySelector('#manhattan')
-    ManhattanBtn.addEventListener('click', Manhattan)
+const statenIsland = () => borough("STATEN ISLAND", num())
 
-    const BrooklynBtn = document.querySelector('#brooklyn')
-   BrooklynBtn.addEventListener('click', Brooklyn)
+//3. Attach Functions to Buttons, this is the connection between the buttons and the 'display' div
+const ManhattanBtn = document.querySelector('#manhattan')
+ManhattanBtn.addEventListener('click', manhattan)
 
-    const BronxBtn = document.querySelector("#bronx")
-   BronxBtn.addEventListener('click', Bronx)
+const BrooklynBtn = document.querySelector('#brooklyn')
+BrooklynBtn.addEventListener('click', brooklyn)
 
-    const QueensBtn = document.querySelector("#queens")
-    QueensBtn.addEventListener('click', Queens)
+const BronxBtn = document.querySelector("#bronx")
+BronxBtn.addEventListener('click', bronx)
 
-    const StatenIslandBtn = document.querySelector('#statenIsland')
-    StatenIslandBtn.addEventListener('click', StatenIsland)
+const QueensBtn = document.querySelector("#queens")
+QueensBtn.addEventListener('click', queens)
+
+const StatenIslandBtn = document.querySelector('#statenIsland')
+StatenIslandBtn.addEventListener('click', statenIsland)
