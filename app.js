@@ -1,23 +1,22 @@
 // let limit = 10
 // const borough = BROOKLYN
-const display = document.querySelector('.display')
-
 //function
 function borough(borough, limit) {
     return fetch('https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=' + borough + "&$limit=" + limit)
         .then(response => response.json())
-        .then(data => {  })
+        .then(data => data)
         .catch(error => console.log(error))
 
 }
 //1. Create a new variable called 'display' and assign it the div with the id of 'display'
 function num () {
     const textBox = document.querySelector("#textBox")
-    return display.textContent = textBox.value}
+    return textBox.value}
     // clears out the input value prop
     // input.value = ''
-
-//2. Create Six Functions (num, manhattan, brooklyn, bronx, queens, statenIsland) 
+    const display = document.querySelector('.display')
+    display.textContent = textBox.value
+//2. Create Functions for buttons(num, manhattan, brooklyn, bronx, queens, statenIsland) 
 //update the value of the div variable using textContent
 // const Manhattan = () => result.textContent
 
