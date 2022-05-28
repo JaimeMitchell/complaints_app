@@ -17,7 +17,9 @@ function borough(borough, limit) {
                 const display = document.getElementById('display')
                 display.appendChild(div)
                 p2.style.visibility = 'hidden'
-                btn.textContent = "Pigs response?"
+                btn.textContent = "Police Response?"
+
+                // Nested button that shows more details by changing the p2 text from hidden to visible.
                 btn.addEventListener('click', function () {
                     p2.style.visibility = 'visible'
                     p2.textContent = complaint.resolution_description
@@ -65,6 +67,21 @@ QueensBtn.addEventListener('click', queens)
 const StatenIslandBtn = document.querySelector('#statenIsland')
 StatenIslandBtn.addEventListener('click', statenIsland)
 
+//5. MAP
+document.getElementById('map')
+var map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([37.41, 8.82]),
+      zoom: 4
+    })
+    
+  })
 // Things to try for bonus:
 // make_point
 // $order=:id

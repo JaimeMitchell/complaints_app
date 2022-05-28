@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+  },
+  "name": "complaints_app",
+  "description": "An offensive donut and pizza eating rat repo. Not sure who came up with this Lab but here we go",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaimeMitchell/complaints_app.git"
+  },
+  "keywords": [],
+  "author": "Jaime Mitchell & Ainur Akhmetcheyeva ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaimeMitchell/complaints_app/issues"
+  },
+  "homepage": "https://github.com/JaimeMitchell/complaints_app#readme",
+  "dependencies": {
+    "osm-and-geojson": "^0.1.2"
+  }
+}
