@@ -2,7 +2,7 @@
 
 function borough(borough, limit) {
 
-    fetch(`https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD&borough=${borough}&$limit=${limit}`)
+    fetch(`https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD&borough=${borough}&$limit=${limit}&$order=complaint_type`)
         .then(response => response.json())
         .then(data => {
             data.map((complaint, index) => {
@@ -22,7 +22,7 @@ function borough(borough, limit) {
                     p2.style.visibility = 'visible'
                     p2.textContent = complaint.resolution_description
                 })
-                console.log(data)
+                console.log(data.sort())
             })
         })
         .catch(error => console.log(error))
@@ -64,3 +64,7 @@ QueensBtn.addEventListener('click', queens)
 
 const StatenIslandBtn = document.querySelector('#statenIsland')
 StatenIslandBtn.addEventListener('click', statenIsland)
+
+// Things to try for bonus:
+// make_point
+// $order=:id
