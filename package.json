@@ -2,7 +2,7 @@
   "devDependencies": {
   },
   "name": "complaints_app",
-  "description": "An offensive donut and pizza eating rat repo. Not sure who came up with this Lab but here we go",
+  "description": "NYC Complaint app from the New York City open source data site",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
